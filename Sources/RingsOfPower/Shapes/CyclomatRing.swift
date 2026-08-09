@@ -11,9 +11,6 @@ import SwiftUI
 ///   overall pattern and its phase.
 /// - A **segments per loop** value that controls curve smoothness.
 ///
-/// The resulting path is always inscribed within the largest centered square that fits
-/// the provided rect.
-///
 /// *Inspired by Jesse Hemingway's "Cyclomat" app!*
 ///
 public struct CyclomatRing: Shape {

@@ -1,17 +1,6 @@
 import SwiftUI
 
 /// A `Shape` that arranges a ring of chevron (arrowhead) wedges around an annular band.
-///
-/// Each chevron is a constant-thickness arm that runs from the inner rim out to the outer rim,
-/// bending at the band's mid-radius toward an apex that is offset tangentially by
-/// ``centerOffsetAngle``. The wedges are distributed evenly around the circle, leaving a gap
-/// between neighbors whose size is governed by ``spacingRatio``.
-///
-/// The inner and outer ends of every chevron are terminated exactly on the band's bounding
-/// circles: the corners are computed as the intersections of the arm edges with the rim circles,
-/// and the caps are drawn as arcs of those circles. Because the geometry lands precisely on the
-/// rims, the shape needs no clipping mask to keep the chevrons inside the band — the edges are
-/// clean by construction.
 public nonisolated struct ChevronRing: Shape {
 
     /// The number of chevrons distributed evenly around the ring. Values below `1` yield an empty shape.
