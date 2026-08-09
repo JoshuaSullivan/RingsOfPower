@@ -6,7 +6,7 @@ import SwiftUI
 /// - Note: Requires iOS 18 or later, as the layout cache is driven by
 ///   `onGeometryChange(for:of:action:)`. Every other shape in this package supports iOS 17.
 @available(iOS 18.0, *)
-public struct StarMapRing: View {
+public struct ConstellationRing: View {
 
     public struct Node: Sendable, Equatable {
         public let angle: CGFloat
@@ -220,11 +220,11 @@ private extension CGFloat {
 @available(iOS 18.0, *)
 #Preview {
     VStack {
-        StarMapRing()
+        ConstellationRing()
             .foregroundStyle(.blue)
-        StarMapRing(thicknessRatio: 0.9, strandCount: 5, nodeCount: 30, nodeReach: 2, nodeRadius: 6)
+        ConstellationRing(thicknessRatio: 0.9, strandCount: 5, nodeCount: 30, nodeReach: 2, nodeRadius: 6)
             .foregroundStyle(.green)
-        StarMapRing(thicknessRatio: 0.4 , strandCount: 2, nodeCount: 15, nodeRadius: 14, lineOpacity: 1)
+        ConstellationRing(thicknessRatio: 0.4 , strandCount: 2, nodeCount: 15, nodeRadius: 14, lineOpacity: 1)
             .foregroundStyle(.red)
     }
     .padding()
