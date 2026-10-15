@@ -44,10 +44,6 @@ public struct ConstellationRing: View {
     public let nodeReach: Int
     public let nodeRadius: CGFloat
     public let lineOpacity: CGFloat
-    /// The distance from the ends that the line stops drawing.
-    ///
-    /// Defaults to `(0, 0)`.
-    public let lineIndents: (CGFloat, CGFloat)
 
     /// Normalized (angle, radius) node data held in `@State` so the random star
     /// pattern stays stable across view re-initializations. Only the absolute
@@ -73,8 +69,7 @@ public struct ConstellationRing: View {
         nodeCount: Int = 20,
         nodeReach: Int = 1,
         nodeRadius: CGFloat = 10,
-        lineOpacity: CGFloat = 0.5,
-        lineIndents: (CGFloat, CGFloat) = (0, 0)
+        lineOpacity: CGFloat = 0.5
     ) {
         self.thicknessRatio = thicknessRatio
         self.strandCount = strandCount
