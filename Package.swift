@@ -7,6 +7,9 @@ let package = Package(
     name: "RingsOfPower",
     platforms: [
         .iOS(.v17),
+        .macOS(.v15),
+        .visionOS(.v2),
+        .tvOS(.v17)
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
